@@ -35,7 +35,7 @@
 
 size = [(1, "Small", 2), (2, "Medium", 3), (3, "Large", 4)]
 type = [(1, "Brewed", 0), (2, "Espresso", 0.5), (3, "Cold Brew", 1)]
-flv = [(1, "None", 0), (2, "Chocolate", 0.5), (3, "Vanilla", 0.5)]
+flv = [(1, "with no enhanced flavour", 0), (2, "with Chocolate", 0.5), (3, "with Vanilla", 0.5)]
 cost = 0
 order_name = []
 
@@ -63,6 +63,8 @@ for digit in flv:
         order_name.append(digit[1])
         break
 
+from functools import reduce
+order_name = reduce(lambda x, y: x +" "+ y, order_name)
 with_tip = cost*1.15
-print(f"Your order is: {order_name}")
+print(f"Your order is {order_name}")
 print(f"The total is: £{cost}\nand with tip is: £{with_tip:.2f}")
