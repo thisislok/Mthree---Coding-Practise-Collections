@@ -1,1 +1,1 @@
-This is the records of my coding pratises.
+This is the records of my coding practise.
