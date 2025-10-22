@@ -1,1 +1,1 @@
-This is the records of my coding practise.
+This is the collection of my coding challenges.
